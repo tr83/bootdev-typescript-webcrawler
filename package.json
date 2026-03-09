@@ -1,0 +1,31 @@
+{
+  "name": "bootdev-typescript-webcrawler",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "tsx ./src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tr83/bootdev-typescript-webcrawler.git"
+  },
+  "keywords": [
+    "bootdev",
+    "typescript",
+    "webcrawler"
+  ],
+  "author": "Tero Riipinen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tr83/bootdev-typescript-webcrawler/issues"
+  },
+  "homepage": "https://github.com/tr83/bootdev-typescript-webcrawler#readme",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^25.4.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  }
+}
