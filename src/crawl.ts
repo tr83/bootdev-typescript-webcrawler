@@ -1,4 +1,5 @@
 import { JSDOM } from 'jsdom'
+import { ExtractedPageData } from './types';
 
 export function normalizeURL(url: string) {
     const urlObj = new URL(url);
@@ -81,4 +82,14 @@ export function getImagesFromHTML(html: string, baseURL: string): string[] {
         console.error("failed to parse HTML:", err);
     }
     return imageURLs;
+}
+
+export function extractPageData(html: string, pageURL: string): ExtractedPageData {
+    return {
+        url: pageURL,
+        heading: getHeadingFromHTML(html),
+        first_paragraph: getFirstParagraphFromHTML(html),
+        outgoing_links: getURLsFromHTML(html, pageURL),
+        image_urls: getImagesFromHTML(html, pageURL)
+    };
 }
