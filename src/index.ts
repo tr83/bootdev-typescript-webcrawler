@@ -1,6 +1,7 @@
 import { argv } from 'node:process';
+import { getHTML } from './crawl';
 
-function main() {
+async function main() {
     if (argv.length < 3) {
         console.error("Please provide a URL as an argument.");
         process.exit(1);
@@ -13,6 +14,10 @@ function main() {
 
     const baseUrl = argv[2];
     console.log(`Starting crawl of: ${baseUrl}`);
+
+    const html = await getHTML(baseUrl);
+    console.log(html);
+
     process.exit(0);
 }
 
